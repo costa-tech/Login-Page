@@ -127,26 +127,11 @@ npm start
 
 ---
 
-## 📊 Git Commit History
-
-```
-* 0bf20bc - chore: Configure Firebase Hosting
-* fb44347 - feat: Create dashboard page with access token display
-* 645bd11 - feat: Implement login page UI with validation
-* 6c59e20 - feat: Configure Firebase authentication
-* 2866866 - feat: Set up React app structure and routing
-* eaf817b - feat: Add public assets and HTML template
-* a01fdb9 - chore: Initial project setup with dependencies
-```
-
----
-
 ## 📧 Developer Information
 
 **Developer**: Costa
 **GitHub**: https://github.com/costa-tech
 **Project**: Tuga's Task Management Login Page
-**Submission Date**: February 6, 2026
 
 ---
 

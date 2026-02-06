@@ -334,45 +334,264 @@ const LoginPage = () => {
               alignItems: 'center',
               justifyContent: 'center',
               position: 'relative',
+              minHeight: '600px',
+              maxWidth: '600px',
             }}
           >
             <Box
               sx={{
                 width: '100%',
-                maxWidth: '500px',
+                maxWidth: '550px',
+                height: '550px',
                 textAlign: 'center',
+                position: 'relative',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
             >
+              {/* Large Light Green/Mint Background Box */}
               <Box
-                component="img"
-                src="https://illustrations.popsy.co/green/meditation.svg"
-                alt="Meditation illustration"
                 sx={{
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%, -50%)',
                   width: '100%',
-                  height: 'auto',
-                  mb: 4,
+                  height: '100%',
+                  borderRadius: '50px',
+                  backgroundColor: '#E8F5E8',
+                  zIndex: 0,
                 }}
               />
-              <Typography
-                variant="h5"
+
+              {/* Floating Avatar - Top Left */}
+              <Box
                 sx={{
-                  fontWeight: 600,
-                  color: 'text.primary',
-                  fontSize: { md: '1.5rem', lg: '1.75rem' },
+                  position: 'absolute',
+                  top: '8%',
+                  left: '8%',
+                  width: 70,
+                  height: 70,
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  backgroundColor: '#fff',
+                  border: '4px solid #7FB77E',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                  zIndex: 3,
                 }}
               >
-                Make your work easier and organized
-              </Typography>
-              <Typography
-                variant="h5"
+                <Box
+                  component="img"
+                  src="/Images/undraw_shy-guy-avatar_094a.svg"
+                  alt="User avatar"
+                  sx={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    padding: '10px',
+                  }}
+                />
+              </Box>
+
+              {/* Floating Avatar - Bottom Right */}
+              <Box
                 sx={{
-                  fontWeight: 600,
-                  color: 'text.primary',
-                  fontSize: { md: '1.5rem', lg: '1.75rem' },
+                  position: 'absolute',
+                  bottom: '18%',
+                  right: '8%',
+                  width: 75,
+                  height: 75,
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  backgroundColor: '#fff',
+                  border: '4px solid #7FB77E',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                  zIndex: 3,
                 }}
               >
-                with <strong>Tuga's App</strong>
-              </Typography>
+                <Box
+                  component="img"
+                  src="/Images/undraw_shy-guy-avatar_094a.svg"
+                  alt="User avatar"
+                  sx={{ 
+                    width: '100%', 
+                    height: '100%', 
+                    objectFit: 'cover',
+                    padding: '10px',
+                  }}
+                />
+              </Box>
+
+              {/* Task Card */}
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: '42%',
+                  left: '2%',
+                  backgroundColor: '#fff',
+                  borderRadius: 3,
+                  padding: 2.5,
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.1)',
+                  minWidth: 200,
+                  maxWidth: 220,
+                  zIndex: 3,
+                }}
+              >
+                <Typography 
+                  variant="h6" 
+                  fontWeight={600} 
+                  sx={{ fontSize: '1.125rem', mb: 0.5 }}
+                >
+                  Canva Design
+                </Typography>
+                <Typography 
+                  variant="body2" 
+                  color="text.secondary" 
+                  sx={{ fontSize: '0.875rem', mb: 2 }}
+                >
+                  10 Task
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      backgroundColor: '#e8f5e9',
+                      color: '#2e7d32',
+                      borderRadius: '8px',
+                      padding: '6px 16px',
+                      fontSize: '0.875rem',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Design
+                  </Box>
+                  <Box
+                    sx={{
+                      position: 'relative',
+                      width: 55,
+                      height: 55,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    {/* Progress Circle */}
+                    <svg width="100%" height="100%" viewBox="0 0 60 60">
+                      <circle
+                        cx="30"
+                        cy="30"
+                        r="24"
+                        fill="none"
+                        stroke="#e0e0e0"
+                        strokeWidth="4"
+                      />
+                      <circle
+                        cx="30"
+                        cy="30"
+                        r="24"
+                        fill="none"
+                        stroke="#7FB77E"
+                        strokeWidth="4"
+                        strokeDasharray={`${Math.PI * 24 * 2 * 0.84} ${Math.PI * 24 * 2}`}
+                        strokeDashoffset={Math.PI * 24 / 2}
+                        strokeLinecap="round"
+                        transform="rotate(-90 30 30)"
+                      />
+                    </svg>
+                    <Typography 
+                      variant="caption" 
+                      fontWeight={600} 
+                      sx={{ 
+                        position: 'absolute',
+                        fontSize: '0.8rem'
+                      }}
+                    >
+                      84%
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+
+              {/* Main Illustration Container */}
+              <Box
+                sx={{
+                  position: 'relative',
+                  zIndex: 1,
+                  width: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  paddingTop: 4,
+                }}
+              >
+                {/* Main Illustration */}
+                <Box
+                  component="img"
+                  src="/Images/undraw_mindfulness_d853.svg"
+                  alt="Meditation illustration"
+                  sx={{
+                    width: '100%',
+                    maxWidth: '420px',
+                    height: 'auto',
+                    display: 'block',
+                  }}
+                />
+
+                {/* Bottom Text */}
+                <Box sx={{ mt: 4, width: '100%' }}>
+                  {/* Pagination Dots */}
+                  <Box 
+                    sx={{ 
+                      display: 'flex', 
+                      gap: 1, 
+                      justifyContent: 'center', 
+                      mb: 2.5 
+                    }}
+                  >
+                    <Box 
+                      sx={{ 
+                        width: 8, 
+                        height: 8, 
+                        borderRadius: '50%', 
+                        backgroundColor: '#e0e0e0' 
+                      }} 
+                    />
+                    <Box 
+                      sx={{ 
+                        width: 8, 
+                        height: 8, 
+                        borderRadius: '50%', 
+                        backgroundColor: '#e0e0e0' 
+                      }} 
+                    />
+                    <Box 
+                      sx={{ 
+                        width: 24, 
+                        height: 8, 
+                        borderRadius: '4px', 
+                        backgroundColor: '#000' 
+                      }} 
+                    />
+                  </Box>
+                  
+                  <Typography
+                    variant="h5"
+                    sx={{
+                      fontWeight: 600,
+                      color: 'text.primary',
+                      fontSize: '1.5rem',
+                      lineHeight: 1.5,
+                      px: 2,
+                    }}
+                  >
+                    Make your work easier and organized
+                    <br />
+                    with <strong>Tuga's App</strong>
+                  </Typography>
+                </Box>
+              </Box>
             </Box>
           </Box>
         </Box>
